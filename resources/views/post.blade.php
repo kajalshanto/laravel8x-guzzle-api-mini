@@ -41,8 +41,8 @@
                                         <img src="{{ $post['avatar'] }}" alt="{{ $post['first_name'] }}" style="width:100px;">
                                     </td>  
                                     <td>
-                                        <a href="#" class="btn btn-warning btn-sm">Edit</a>
-                                        <a href="{{ route('deletepost.single', $post['id'] ) }}" class="btn btn-danger btn-sm">Delete</a>
+                                        <a href="{{ route('post.edit', $post['id'] ) }}" class="btn btn-warning btn-sm">Edit</a>
+                                        <a href="{{ route('post.delete', $post['id'] ) }}" class="btn btn-danger btn-sm">Delete</a>
                                     </td>
                                 </tr>
                                 @endforeach                                
