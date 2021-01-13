@@ -16,4 +16,11 @@ class GuzzleClientController extends Controller
         $user = Http::get('https://reqres.in/api/users/'.$id);
         return view('singlepost', ['user'=> $user['data']]); 
     }
+
+    public function deleteData($id){
+        $user = Http::delete('https://reqres.in/api/users/'.$id);
+        return response()->json([
+            'message' => 'Delete Success!'
+        ], 201); 
+    }
 }
